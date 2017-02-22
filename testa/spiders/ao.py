@@ -127,10 +127,6 @@ class AoSpider(scrapy.Spider):
                        "jobFunction VARCHAR(500) NOT NULL )")
 
 
-
-    def gowno(self):
-        self.logger.debug("jestesm w gownie")
-        return Request(self.urls[self.iterator], callback=self.parsetwo)
     def parse(self, response):
         self.logger.debug(response.xpath('//body/text()'))
         time.sleep(61)
